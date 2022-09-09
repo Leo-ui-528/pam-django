@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Главная {% endblock %} :: Сотрудники</title>
+    <link rel ="stylesheet" type="text/css"
+    href="{% static 'Bb/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1>Сотрудники</h1>
+    </header>
+    <nav>
+        <a href="{% url 'index' %}">Главная</a>
+        <a href="{% url 'add' %}">Добавить</a>
+        {% for owner in owners %}
+        <a href="{% url 'by_owner' owner.pk %}">{{ owner.owner }}</a>
+        {% endfor %}
+    </nav>
+    <section>
+        {% block content %}
+        {% endblock %}
+    </section>
+</body>
+
+</html>

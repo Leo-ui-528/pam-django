@@ -1,0 +1,15 @@
+{% extends "layout/basic.html"%}
+
+{% block title %}{{ current_owner.owner }}{% endblock %}
+
+
+{% block content %}
+<h2>Сортудник: {{ current_owner.owner }}</h2>
+{% for bb in bbs %}
+<div>
+    <h2>Имя: {{bb.name}}</h2>
+    <p>Владелец: {{bb.owner}}</p>
+    <p>Дата добавления: {{ bb.published | date:"d.m.Y H:i:s" }}</p>
+</div>
+{% endfor %}
+{% endblock %}
