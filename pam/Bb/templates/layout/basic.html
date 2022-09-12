@@ -16,10 +16,24 @@
     </header>
     <nav>
         <a href="{% url 'index' %}">Главная</a>
-        <a href="{% url 'add' %}">Добавить</a>
-        {% for owner in owners %}
+        <a href="{% url 'add' %}">Добавить сотрудника</a>
+        <a href="#">Виды деятельности</a>
+        <a href="#">Виды обьектов</a>
+        <a href="#">Город</a>
+        <a href="#">Округ</a>
+        <a href="#">Госзадание</a>
+        <a href="#">Договоры</a>
+        <a href="#">Документ ПАМ</a>
+        <a href="#">Заказчики</a>
+        <a href="#">Исходник ПАМ</a>
+        <a href="#">Направления деятельности</a>
+        <a href="#">Подразделения</a>
+        <a href="#">Поручение</a>
+        <a href="#">Сотрудники</a>
+
+        <!-- {% for owner in owners %}
         <a href="{% url 'by_owner' owner.pk %}">{{ owner.owner }}</a>
-        {% endfor %}
+        {% endfor %} -->
     </nav>
     <section>
         {% block content %}
